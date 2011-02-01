@@ -4,6 +4,16 @@
 
 	<div class="post">
 		<h3 class="title"><?php the_title(); ?></h3>
+		
+		<div class="meta">
+			<div class="info">
+				发表于：<?php the_time('Y年n月j日'); 
+				printf(' | 归档于:%1$s', get_the_category_list(', ')); ?> 
+				| 标签:<?php the_tags('', ', ' ,''); ?>
+			</div>
+			
+			<div class="fixed"></div>
+		</div>
 
 		<div class="content">
 			<?php the_content(); ?>
@@ -21,11 +31,6 @@
 				<a href="#respond">发表评论</a>
 				 | <a href="<?php trackback_url(); ?>" rel="trackback">Trackback</a>
 				<?php edit_post_link('编辑', ' | ', ''); ?>
-			</div>
-			<div class="info">
-				<?php the_time('Y年n月j日'); 
-				printf(' | 归档于 %1$s', get_the_category_list(', ')); ?> 
-				| 标签: <?php the_tags('', ', ' ,''); ?>
 			</div>
 			
 			<div class="fixed"></div>
