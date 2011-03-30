@@ -8,16 +8,26 @@
 		<div class="meta">
 			<div class="info">
 				发表于：<?php the_time('Y年n月j日'); 
-				printf(' | 归档于:%1$s', get_the_category_list(', ')); ?> 
-				| 标签:<?php the_tags('', ', ' ,''); ?>
+				printf(' | 归档于: %1$s', get_the_category_list(', ')); ?> 
+				| 标签: <?php the_tags('', ', ' ,''); ?>
 			</div>
 			
 			<div class="fixed"></div>
 		</div>
-
 		<div class="content">
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7660329485539611";
+/* feed广告 */
+google_ad_slot = "3511431185";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 			<?php the_content(); ?>
-			<div class="fixed"></div>
+			<div class="fixed">本文短网址：<a href="<?php wp_ozh_yourls_raw_url( $echo = true)?>" rel="nofollow alternate short shorter shorturl shortlink" title="<?php the_title_attribute(); ?>"><?php wp_ozh_yourls_raw_url( $echo = true)?></a></div>
 		</div>
 
 			<div id="related_posts">
@@ -32,6 +42,7 @@
 				 | <a href="<?php trackback_url(); ?>" rel="trackback">Trackback</a>
 				<?php edit_post_link('编辑', ' | ', ''); ?>
 			</div>
+			
 			
 			<div class="fixed"></div>
 		</div>

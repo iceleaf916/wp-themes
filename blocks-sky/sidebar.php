@@ -14,7 +14,7 @@
 		<div class="widget widget_categories">
 			<h3>标签云</h3>
 			<ul>
-				<?php wp_tag_cloud('smallest=12&largest=12&number=30&orderby=count'); ?>
+				<?php wp_tag_cloud('smallest=12&largest=12&number=50&orderby=count'); ?>
 			</ul>
 		</div>
 		<!-- recent posts -->
